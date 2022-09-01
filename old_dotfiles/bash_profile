@@ -1,0 +1,55 @@
+######################
+# PATH CONFIGURATION #
+######################
+
+# JAVA/JDK
+#export JAVA_HOME=$(/usr/libexec/java_home)
+# MySql
+#export PATH=/usr/local/mysql/bin:$PATH
+# Gradle
+#export PATH=/Users/joon/Developements/gradle/gradle-2.2.1/bin:$PATH
+# Maven
+#export PATH=/Users/joon/Developements/maven/apache-maven-3.2.5/bin:$PATH
+#export M2_HOME=/Users/joon/Developements/maven/apache-maven-3.2.5/
+# Go
+#export GOROOT=/usr/local/opt/go/libexec
+#export GOPATH=/Users/joon/Projects/Go
+#export PATH=$PATH:$GOPATH/bin
+
+####################
+# Terminal Setting #
+####################
+
+# Prompt
+# Good Reference -> http://misc.flogisoft.com/bash/tip_colors_and_formatting
+# PS1='\u@\h \W \$ '
+PS1='\[\033[1m\]\[\033[38;5;65m\]\u\[\033[38;5;217m\]@\[\033[38;5;109m\]\h \[\033[38;5;217m\]\W \\$ \[\033[0m\]'
+
+# Output Color
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# ALIAS
+alias la='ls -alh'
+alias ll='ls -lh'
+
+alias  b='cd ..'
+alias bb='cd ..'
+
+alias dropbox='cd ~/Dropbox'
+alias ucsd='dropbox; cd UCSD'
+alias cse='ucsd; cd CSE'
+
+alias cdp='cd ~/Projects'
+alias ucsdp='cdp; cd UCSD'
+alias studyp='cdp; cd Study'
+alias cdgo='cd $GOPATH/src/github.com/jeongjoonlee3'
+
+alias vi='vim'
+
+alias sshucsd='ssh jjl112@ieng6.ucsd.edu'
+
+alias brewup='brew update; brew upgrade; brew cleanup'
+
+# CALL BASHRC
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi

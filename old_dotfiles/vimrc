@@ -1,0 +1,148 @@
+"######################
+"### VIM_PLUG BEGIN ###
+"######################
+call plug#begin('~/.vim/plugged')
+
+" seoul256 color scheme
+Plug 'junegunn/seoul256.vim'
+
+" fzf
+Plug 'junegunn/fzf.vim'
+
+" vim-go
+" Plug 'fatih/vim-go'
+
+" YouCompleteMe
+" Plug 'Valloric/YouCompleteMe'
+
+" emmet-vim
+" Plug 'mattn/emmet-vim'
+
+" syntastic
+" Plug 'scrooloose/syntastic'
+
+" OmniSharp
+"Plug 'OmniSharp/omnisharp-vim'
+
+" vim-dispatch
+"Plug 'tpope/vim-dispatch'
+
+call plug#end()
+"#####################
+"### VIM-PLUG END ####
+"#####################
+
+"--------------------------------------------------------------------------------
+
+"##################
+"### VIM CONFIG ###
+"##################
+let mapleader=","
+syntax on
+
+" BUFFER
+set hidden
+
+" STATUS LINE
+set laststatus=2
+
+" TEXT EDITOR
+set encoding=utf-8
+set fileencoding=utf-8
+set backspace=2
+set title
+set nu              " number
+"set rnu            " relativenumber
+set ru              " ruler
+set ts=4            " tabstop
+set sw=4            " shiftwidth
+set et              " expandtab
+"set sc             " showcmd
+set hls             " hlsearch
+set is              " incsearch
+
+" DISABLE AUTO COMMENT
+au FileType * set fo-=r fo-=c fo-=o     " formatoptions
+
+" FOLD
+"set foldmethod=indent
+"set foldlevel=99
+
+" Flexible Cursor
+nnoremap j gj
+nnoremap k gk
+
+" WINDOW NAVIATION
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+"nnoremap <leader>[ :bprevious<CR>
+"nnoremap <leader>] :bnext<CR>
+"nnoremap <leader>q :bd<CR>
+"nnoremap <leader>wq :w<CR> :bd<CR>
+
+" PANE SPLIT (MORE NATURAL WAY)
+set splitbelow
+set splitright
+
+" SWAP FILES & BACKUP
+set nobackup
+set directory=$HOME/.vim/swapfiles/
+
+" TIMEOUT (Shift o delay)
+set timeout timeoutlen=3000 ttimeoutlen=100
+
+"#######################
+"### VIM CONFIG  END ###
+"#######################
+
+"--------------------------------------------------------------------------------
+
+"############################
+"### PLUG-IN CONFIG BEGIN ###
+"############################
+
+" seoul256 color scheme
+color seoul256
+let g:seoul256_background = 238
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+nnoremap <leader>F :Files<CR>
+nnoremap <leader>f :Buffers<CR>
+
+" vim-go
+" au FileType go nmap <leader>r <Plug>(go-run)
+" au FileType go nmap <leader>b <Plug>(go-build)
+" au FileType go nmap <leader>t <Plug>(go-test)
+" au FileType go nmap <leader>c <Plug>(go-coverage)
+" 
+" au FileType go nmap <Leader>ds <Plug>(go-def-split)
+" au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+" au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+" 
+" au FileType go nmap <Leader>gd <Plug>(go-doc)
+" au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_structs = 1
+"let g:go_highlight_interfaces = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+
+" YouCompleteMe
+"let g:ycm_global_ycm_extra_conf = '~/.vim/config/YouCompleteMe/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf = 0
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+
+" syntastic
+" let g:syntastic_quiet_messages = { "level": "warnings" }
+
+"##########################
+"### PLUG-IN CONFIG END ###
+"##########################

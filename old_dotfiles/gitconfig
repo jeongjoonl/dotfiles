@@ -1,0 +1,11 @@
+[user]
+    name = Jeongjoon Lee
+    email = joondev32@gmail.com
+[core]
+    autocrlf = input
+    editor = /usr/local/bin/vim
+	excludesfile = /Users/joon/.gitignore_global
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
